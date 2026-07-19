@@ -1,18 +1,18 @@
 [
   {
-    "src": "/img/works/cotton_leaves.png",
+    "src": "/img/works/cotton_ui_screenshot.png",
     "title": "Multilingual Cotton Leaf Disease Detection System",
     "description": "Developed a CNN-based smart web application to detect cotton leaf diseases from uploaded images. The system provides multilingual disease information, pesticide recommendations, disease lifecycle details, and text-to-speech voice support in English, Kannada, and Hindi.",
     "tech": ["Python", "TensorFlow", "OpenCV", "Flask", "gTTS"],
-    "github": "#",
+    "github": null,
     "live": null
   },
   {
-    "src": "/img/works/medical_scanner.png",
+    "src": "/img/works/melanoma_ui_screenshot.png",
     "title": "Melanoma Stage Detection System",
     "description": "Built a machine learning-based web application that classifies melanoma stages from skin lesion images using image preprocessing and prediction techniques for early diagnosis support.",
     "tech": ["Python", "TensorFlow", "Scikit-learn", "OpenCV", "Flask"],
-    "github": "#",
+    "github": null,
     "live": null
   },
   {

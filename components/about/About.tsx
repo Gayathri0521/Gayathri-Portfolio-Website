@@ -68,7 +68,7 @@ export default function About() {
               <div className="btn-group about-descr__btnholder animate-in-up">
                 <a
                   className="btn mobile-vertical btn-default btn-hover btn-hover-accent"
-                  href="/Gayathri_m_25MCAR0145.pdf"
+                  href="/Gayathri_M_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

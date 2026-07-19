@@ -11,6 +11,7 @@ import Experience from "@/components/resume/Experience";
 import Research from "@/components/resume/Research";
 import ResumeHeading from "@/components/resume/ResumeHeading";
 import Tools from "@/components/resume/Tools";
+import WorkExperience from "@/components/resume/WorkExperience";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Gayathri M | Developer Portfolio",
@@ -28,6 +29,7 @@ export default function Home1() {
           <About />
           <section id="resume" className="inner resume">
             <Tools />
+            <WorkExperience />
             <Experience />
             <Education />
             <Research />

@@ -9,23 +9,63 @@ export default function Profile({
       <style>{`
         /* Profile image square card */
         .profile-image-card {
-          width: 250px !important;
-          height: 250px !important;
-          background: #F8F4EE !important;
+          width: 240px !important;
+          height: 240px !important;
+          background: rgba(255, 255, 255, 0.04) !important;
+          border: 1px solid var(--stroke-elements) !important;
           border-radius: 24px !important;
-          padding: 10px !important;
+          padding: 0px !important;
           display: flex !important;
           align-items: center !important;
           justify-content: center !important;
           overflow: hidden !important;
-          margin: 0 auto !important;
+          margin: 0 auto 2.5rem auto !important;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+          transition: all 0.3s ease !important;
+        }
+        [color-scheme="light"] .profile-image-card {
+          background: rgba(0, 0, 0, 0.03) !important;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05) !important;
         }
         .profile-image-card img {
           width: 100% !important;
           height: 100% !important;
-          object-fit: contain !important;
+          object-fit: cover !important;
           object-position: center !important;
           display: block !important;
+          border-radius: 24px !important;
+        }
+        
+        .avatar__logo {
+          margin-bottom: 1.2rem !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          width: 100%;
+        }
+        
+        .avatar__name {
+          font-family: var(--_font-default);
+          font-weight: 800;
+          font-size: 2.6rem;
+          color: var(--t-bright, #ffffff);
+          text-align: center;
+          margin-top: 0 !important;
+          margin-bottom: 0.5rem !important;
+          letter-spacing: -0.5px;
+          line-height: 1.2;
+        }
+
+        .avatar__subtitle {
+          font-family: var(--_font-default);
+          font-weight: 600;
+          font-size: 1.4rem;
+          color: var(--t-muted, #a1a1af);
+          text-align: center;
+          margin-top: 0 !important;
+          margin-bottom: 2.5rem !important;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
         }
         
         /* Circular social icon buttons with hover scale and glow */
@@ -55,11 +95,64 @@ export default function Profile({
           color: #4CAF50 !important;
           box-shadow: 0 0 15px rgba(76, 175, 80, 0.45) !important;
         }
+
+        /* Responsive Layout Overrides */
+        @media only screen and (min-width: 992px) {
+          #avatar.avatar {
+            position: fixed !important;
+            top: 3rem !important;
+            left: 3rem !important;
+            width: 300px !important;
+            height: calc(100vh - 6rem) !important;
+            margin: 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            z-index: 10 !important;
+          }
+          .avatar__container {
+            height: 100% !important;
+            padding: 3rem !important;
+          }
+          /* Shift the main content block 50px further to the right on desktop */
+          .content {
+            padding-left: 380px !important;
+          }
+        }
+        @media only screen and (min-width: 1200px) {
+          #avatar.avatar {
+            left: 6rem !important;
+          }
+          .content {
+            padding-left: 415px !important;
+          }
+        }
+        @media only screen and (min-width: 1400px) {
+          #avatar.avatar {
+            top: 5rem !important;
+            left: 8rem !important;
+            width: 400px !important;
+            height: calc(100vh - 10rem) !important;
+          }
+          .avatar__container {
+            padding: 4rem !important;
+          }
+          .content {
+            padding-left: 540px !important;
+          }
+        }
+        @media only screen and (min-width: 1600px) {
+          #avatar.avatar {
+            left: 10rem !important;
+          }
+          .content {
+            padding-left: 560px !important;
+          }
+        }
       `}</style>
       <div className="avatar__container d-flex flex-column justify-content-lg-between">
         {/* image and logo */}
         <div className="avatar__block">
-          <div className="avatar__logo d-flex align-items-center">
+          <div className="avatar__logo d-flex align-items-center justify-content-center">
             <div className="logo__image">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -92,10 +185,13 @@ export default function Profile({
               h-3.9h-3.9h-3.9H35.7z M59.2,39.3h-3.9v-3.9h3.9V39.3z M55.3,43.2h-3.9v-3.9h3.9V43.2z"
                 />
               </svg>
-              <span className="logo__caption">
-                <p>GM</p>
-              </span>
             </div>
+            <span className="logo__caption">
+              <p>GM</p>
+            </span>
+          </div>
+          <div className="avatar__name">
+            Gayathri M
           </div>
           <div className="profile-image-card">
             {/* eslint-disable-next-line @next/next/no-img-element */}

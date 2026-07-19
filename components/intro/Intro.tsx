@@ -81,7 +81,7 @@ export default function Intro() {
           font-size: 7.2rem;
           font-weight: 800;
           line-height: 1.1;
-          color: #ffffff;
+          color: var(--t-bright, #ffffff);
           margin-bottom: 20px;
           letter-spacing: -2.5px;
           animation: fadeIn 1s ease-out;
@@ -89,8 +89,8 @@ export default function Intro() {
         .hero-title-role {
           font-size: 3.6rem;
           font-weight: 700;
-          color: #ffffff;
-          margin-bottom: 28px;
+          color: var(--t-bright, #ffffff);
+          margin-bottom: 4rem !important;
           line-height: 1.25;
           min-height: 50px; /* Prevent layout shifts */
         }
@@ -106,9 +106,10 @@ export default function Intro() {
         .hero-description {
           font-size: 1.7rem;
           line-height: 1.8;
-          color: var(--text-mute, #b0b0b0);
+          color: var(--t-medium, #c7c6d3);
           max-width: 720px;
-          margin-bottom: 40px;
+          margin-top: 1.5rem !important;
+          margin-bottom: 4.5rem !important;
         }
         .hero-buttons {
           display: flex;
@@ -141,12 +142,16 @@ export default function Intro() {
         }
         .hero-btn-outline {
           background: rgba(255, 255, 255, 0.03);
-          color: #ffffff;
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          color: var(--t-bright, #ffffff);
+          border: 1px solid var(--stroke-controls, rgba(255, 255, 255, 0.1));
+        }
+        [color-scheme="light"] .hero-btn-outline {
+          background: rgba(0, 0, 0, 0.02);
         }
         .hero-btn-outline:hover {
-          background: rgba(255, 255, 255, 0.08);
-          border-color: rgba(255, 255, 255, 0.2);
+          background: var(--stroke-elements, rgba(255, 255, 255, 0.08));
+          border-color: var(--stroke-controls, rgba(255, 255, 255, 0.2));
+          color: var(--t-bright, #ffffff);
           transform: translateY(-2px);
         }
         
@@ -316,9 +321,8 @@ export default function Intro() {
                 <i className="ph-bold ph-squares-four" />
               </a>
               <a
-                href="/Gayathri_m_25MCAR0145.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/Gayathri_M_Resume.pdf"
+                download="Gayathri_M_Resume.pdf"
                 className="hero-btn hero-btn-outline"
               >
                 <span>Download Resume</span>

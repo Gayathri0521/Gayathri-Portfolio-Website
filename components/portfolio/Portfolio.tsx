@@ -278,28 +278,32 @@ export default function Portfolio() {
                             );
                           })}
                         </div>
-                        <div className="project-buttons">
-                          <a
-                            href={item.github}
-                            className="proj-btn proj-btn-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <i className="ph-bold ph-github-logo" />
-                            GitHub
-                          </a>
-                          {item.live && (
-                            <a
-                              href={item.live}
-                              className="proj-btn proj-btn-secondary"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <i className="ph-bold ph-arrow-square-out" />
-                              Live Demo
-                            </a>
-                          )}
-                        </div>
+                        {(item.github || item.live) && (
+                          <div className="project-buttons">
+                            {item.github && (
+                              <a
+                                href={item.github}
+                                className="proj-btn proj-btn-primary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <i className="ph-bold ph-github-logo" />
+                                GitHub
+                              </a>
+                            )}
+                            {item.live && (
+                              <a
+                                href={item.live}
+                                className="proj-btn proj-btn-secondary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <i className="ph-bold ph-arrow-square-out" />
+                                Live Demo
+                              </a>
+                            )}
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
